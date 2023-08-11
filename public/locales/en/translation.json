@@ -11,5 +11,16 @@
         "heading_three": "in Pet Health and Happiness.",
         "paragraph": "Experience Pet your pet Veterinary Clinic – your ultimate pet care solution. Our services encompass exceptional veterinary care, a safe and comforting pet hostel, and a high-quality array of medicines and nourishing foods. With our dedicated team, your furry loved ones will receive comprehensive care all under one roof.",
         "button": "Join pet community!"
+    },
+    "services": {
+        "services": "Services",
+        "service_one": "Pets Medical Care",
+        "service_two": "Hostel for Pets",
+        "service_three": "Medicines and Food"
+    },
+    "footer": {
+        "links": "Links",
+        "about": "About",
+        "services": "Services"
     }
 }
