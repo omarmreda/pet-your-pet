@@ -2,11 +2,16 @@ import { GrLanguage } from 'react-icons/gr'
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
+import { Link } from 'react-router-dom'
+import Cookies from 'js-cookie'
 
-const Navbar = ({ isRtl }) => {
+const Navbar = ({ isRtl, setIsRtl }) => {
     const { t } = useTranslation()
     return (
-        <nav className={`bg-white block fixed w-full z-20 top-0 left-0 border-b border-gray-200 changa`} style={{ direction: isRtl ? 'rtl' : 'ltr' }}>
+        <nav
+            className={`bg-white block fixed w-full z-20 top-0 left-0 border-b border-gray-200 changa`}
+            style={{ direction: isRtl ? 'rtl' : 'ltr' }}
+        >
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="#" className="flex items-center">
                     <img
@@ -19,39 +24,53 @@ const Navbar = ({ isRtl }) => {
                     </span>
                 </a>
                 <div className="flex md:order-2">
-                    <div className='group inline-block relative'>
-
+                    <div className="group inline-block relative">
                         <button
                             type="button"
-                            className={`text-white group relative flex items-center px-4 py-2 text-center ${isRtl ? 'ml-3 md:ml-0' : 'mr-3 md:mr-0'}`}
+                            className={`text-white group relative flex items-center px-4 py-2 text-center ${isRtl ? 'ml-3 md:ml-0' : 'mr-3 md:mr-0'
+                                }`}
                         >
-                            <GrLanguage className="text-base group-hover:text-blue-500" />
-                            <MdOutlineKeyboardArrowDown className="text-black text-lg group-hover:text-blue-500" />
+                            <GrLanguage className="text-base group-hover:text-red-800" />
+                            <MdOutlineKeyboardArrowDown className="text-black text-lg group-hover:text-red-800" />
                         </button>
                         <ul className="absolute bg-white hidden text-gray-800 w-max pt-4 group-hover:flex flex-col left-1/2 transform -translate-x-1/2 text-center z-50">
                             <li
                                 className="rounded-t flex cursor-pointer items-center justify-start gap-2  hover:bg-gray-400 py-2 px-4  whitespace-no-wrap"
-                                onClick={() => i18next.changeLanguage('en')}
+                                onClick={() => {
+                                    i18next.changeLanguage('en');
+                                    Cookies.set('i18next', 'en');
+                                    setIsRtl(false)
+                                }}
                             >
                                 <span>English</span>
-                                <img src='/images/uk.png' alt='uk' className='w-4 h-4' />
-
+                                <img
+                                    src="/images/uk.png"
+                                    alt="uk"
+                                    className="w-4 h-4"
+                                />
                             </li>
                             <li
                                 className="rounded-t flex cursor-pointer justify-start items-center gap-2  hover:bg-gray-400 py-2 px-4  whitespace-no-wrap"
-                                onClick={() => i18next.changeLanguage('ar')}
+                                onClick={() => {
+                                    i18next.changeLanguage('ar');
+                                    Cookies.set('i18next', 'ar');
+                                    setIsRtl(true)
+                                }}
                             >
-                                <span className='pl-2'>العربية</span>
-                                <img src="/images/arabic.png" alt='arabic' className='w-4 h-4' />
+                                <span className="pl-2">العربية</span>
+                                <img
+                                    src="/images/arabic.png"
+                                    alt="arabic"
+                                    className="w-4 h-4"
+                                />
                             </li>
                         </ul>
-
                     </div>
 
                     <button
                         data-collapse-toggle="navbar-sticky"
                         type="button"
-                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                         aria-controls="navbar-sticky"
                         aria-expanded="false"
                     >
@@ -79,34 +98,47 @@ const Navbar = ({ isRtl }) => {
                 >
                     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <a
-                                href="#"
-                                className={`block py-2 ${isRtl ? '!pr-3 !pl-4 md:p-0' : ' pl-3 pr-4 md:p-0'} text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white   md:dark:hover:bg-transparent`}
+                            <Link
+                                to="/"
+                                className={`block py-2 ${isRtl
+                                    ? '!pr-3 !pl-4 md:p-0'
+                                    : ' pl-3 pr-4 md:p-0'
+                                    } text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-800  md:dark:hover:text-red-800 dark:text-white   md:dark:hover:bg-transparent`}
                                 aria-current="page"
                             >
                                 {t('header.home')}
-                            </a>
+                            </Link>
                         </li>
                         <li>
                             <a
                                 href="#"
-                                className={`block py-2 ${isRtl ? '!pr-3 pl-4 md:p-0' : ' pl-3 pr-4 md:p-0'} text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white   md:dark:hover:bg-transparent`}
+                                className={`block py-2 ${isRtl
+                                    ? '!pr-3 pl-4 md:p-0'
+                                    : ' pl-3 pr-4 md:p-0'
+                                    } text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-800  md:dark:hover:text-red-800 dark:text-white   md:dark:hover:bg-transparent`}
                             >
                                 {t('header.about')}
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="#"
-                                className={`block py-2 ${isRtl ? 'pr-3 pl-4 md:p-0' : ' pl-3 pr-4 md:p-0'} text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white   md:dark:hover:bg-transparent`}
+                            <Link
+                                to="/medicine"
+                                className={`block py-2 ${isRtl
+                                    ? 'pr-3 pl-4 md:p-0'
+                                    : ' pl-3 pr-4 md:p-0'
+                                    } text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-800  dark:text-white   md:dark:hover:bg-transparent`}
                             >
                                 {t('header.services')}
-                            </a>
+                            </Link>
                         </li>
+
                         <li>
                             <a
                                 href="#"
-                                className={`block py-2 ${isRtl ? 'pr-3 pl-4 md:p-0' : ' pl-3 pr-4 md:p-0'} text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white  md:dark:hover:bg-transparent`}
+                                className={`block py-2 ${isRtl
+                                    ? 'pr-3 pl-4 md:p-0'
+                                    : ' pl-3 pr-4 md:p-0'
+                                    } text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-800 dark:text-white  md:dark:hover:bg-transparent`}
                             >
                                 {t('header.contact')}
                             </a>
@@ -114,7 +146,7 @@ const Navbar = ({ isRtl }) => {
                     </ul>
                 </div>
             </div>
-        </nav >
+        </nav>
     )
 }
 

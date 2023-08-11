@@ -1,8 +1,12 @@
 
-
-const HomePage = () => {
+import MainSection from '../components/MainSection/MainSection'
+import Services from '../components/Services/Services'
+const HomePage = ({ isRtl }) => {
     return (
-        <div>HomePage</div>
+        <>
+            <MainSection isRtl={isRtl} />
+            <Services isRtl={isRtl} />
+        </>
     )
 }
 

@@ -2,7 +2,7 @@
     "header": {
         "home": "الرئيسية",
         "about": "تعرف علينا",
-        "services": "الخدمات",
+        "services": "العيادة",
         "contact": "تواصل معنا"
     },
     "mainSection": {
@@ -18,11 +18,21 @@
         "service_two": "أماكن معيشة",
         "service_three": "الدواء والغذاء"
     },
-        "footer":{
+    "footer":{
             "links" : "تصفح",
+            "more_links" : "المزيد",
+            "register" : "سجل الاَن",
+            "contact":"تواصل معنا",
+            "privacy" : "حقوق الملكية",
+            "legal" : "الحقوق",
+            "terms" : "الشروط و القواعد",
             "about" : "تعرف علينا",
             "services" : "الخدمات"
 
+    },
+    "pharmacy":{
+        "medicines" : "الدواء",
+        "food" : "الغذاء"
     }
 }
 

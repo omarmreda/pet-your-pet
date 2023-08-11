@@ -2,7 +2,7 @@
     "header": {
         "home": "Home",
         "about": "About",
-        "services": "Services",
+        "services": "Pharmacy",
         "contact": "Contact"
     },
     "mainSection": {
@@ -20,7 +20,18 @@
     },
     "footer": {
         "links": "Links",
+        "more_links" : "more links",
+        "register" : "Register your pet",
+        "contact":"Contact",
+        "legal" : "legal",
+        "privacy" : "Privacy Policy",
+        "terms" : "Terms & conditions",
         "about": "About",
         "services": "Services"
+    },
+    "pharmacy":{
+        "medicines" : "Medicines",
+        "food" : "Food"
     }
+
 }

@@ -15,35 +15,35 @@ const Footer = ({ isRtl }) => {
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">{t('footer.links')}</h2>
+                            <h2 className="mb-6 text-sm font-semibold text-red-800 uppercase">{t('footer.links')}</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
                                     <a href="#" className="hover:underline">{t('footer.about')}</a>
                                 </li>
                                 <li>
-                                    <a href="https://tailwindcss.com/" className="hover:underline">{t('footer.services')}</a>
+                                    <a href="#" className="hover:underline">{t('footer.services')}</a>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">More Links</h2>
+                            <h2 className="mb-6 text-sm font-semibold text-red-800 uppercase">{t('footer.more_links')}</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Register your Pet</a>
+                                    <a href="#" className="hover:underline ">{t('footer.register')}</a>
                                 </li>
                                 <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Contact</a>
+                                    <a href="#" className="hover:underline">{t('footer.contact')}</a>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                            <h2 className="mb-6 text-sm font-semibold text-red-800 uppercase">{t('footer.legal')}</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Privacy Policy</a>
+                                    <a href="#" className="hover:underline">{t('footer.privacy')}</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:underline">Terms &amp; Conditions</a>
+                                    <a href="#" className="hover:underline">{t('footer.terms')}</a>
                                 </li>
                             </ul>
                         </div>

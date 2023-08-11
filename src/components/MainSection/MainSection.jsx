@@ -8,7 +8,7 @@ const MainSection = ({ isRtl }) => {
             style={{ direction: isRtl ? 'rtl' : 'ltr' }}
         >
             <div className="w-5/12 ">
-                <h1 className="w-full changa">
+                <h1 className="w-full changa text-red-800">
                     <span className="block text-2xl">
                         {t('mainSection.heading_one')}
                     </span>
@@ -22,7 +22,7 @@ const MainSection = ({ isRtl }) => {
                 <p className="mt-6">{t('mainSection.paragraph')}</p>
                 <button
                     type="button"
-                    className="text-gray-900 mt-6 bg-white border border-gray-600 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2"
+                    className="text-red-800 mt-6 bg-white border border-red-800 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2"
                 >
                     {t('mainSection.button')}
                 </button>

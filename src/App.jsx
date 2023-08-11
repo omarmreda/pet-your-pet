@@ -1,21 +1,37 @@
-
 import './App.css'
-import Footer from './components/Footer/Footer';
-import MainSection from './components/MainSection/MainSection';
-import Navbar from './components/Navbar/Navbar';
-import Services from './components/Services/Services';
-import i18n from './i18next';
-
+import { Route, Routes } from 'react-router-dom'
+import Footer from './components/Footer/Footer'
+import Navbar from './components/Navbar/Navbar'
+import i18n from './i18next'
+import HomePage from './pages/HomePage'
+import RegisterPage from './pages/RegisterPage'
+import MedicinePage from './pages/MedicinePage'
+import { useEffect, useState } from 'react'
 
 
 function App() {
-    const isRtl = i18n.dir() === 'rtl';
 
+
+
+    const [isRtl, setIsRtl] = useState(i18n.dir() === 'rtl')
+
+
+
+    useEffect(() => {
+        if (isRtl) {
+            document.body.dir = 'rtl'
+        } else {
+            document.body.dir = 'ltr'
+        }
+    }, [isRtl])
     return (
-        <div style={{ direction: isRtl ? 'rtl' : 'ltr' }}>
-            <Navbar isRtl={isRtl} />
-            <MainSection isRtl={isRtl} />
-            <Services isRtl={isRtl} />
+        <div>
+            <Navbar isRtl={isRtl} setIsRtl={setIsRtl} />
+            <Routes>
+                <Route path="/" element={<HomePage isRtl={isRtl} />} />
+                <Route path="register" element={<RegisterPage />} />
+                <Route path="medicine" element={<MedicinePage />} />
+            </Routes>
             <Footer isRtl={isRtl} />
         </div>
     )
