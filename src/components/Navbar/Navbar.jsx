@@ -4,10 +4,14 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
+import { useState } from "react";
 
 const Navbar = ({ isRtl, setIsRtl }) => {
+
+    const [showMobilemenu, setShowMobileMenu] = useState(false);
     const handleClick = () => {
         window.scrollTo(0, 0);
+        setShowMobileMenu(false)
     };
     const { t } = useTranslation();
     return (
@@ -71,9 +75,10 @@ const Navbar = ({ isRtl, setIsRtl }) => {
                     <button
                         data-collapse-toggle="navbar-sticky"
                         type="button"
-                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:text-red-800 focus:outline-none focus:ring-2 focus:ring-gray-200"
                         aria-controls="navbar-sticky"
                         aria-expanded="false"
+                        onClick={() => setShowMobileMenu(!showMobilemenu)}
                     >
                         <span className="sr-only">Open main menu</span>
                         <svg
@@ -94,7 +99,7 @@ const Navbar = ({ isRtl, setIsRtl }) => {
                     </button>
                 </div>
                 <div
-                    className="items-center bg-[#111] justify-between hidden w-full md:flex md:w-auto md:order-1"
+                    className={`items-center bg-[#111] justify-between ${showMobilemenu ? 'flex' : "hidden"} w-full md:flex md:w-auto md:order-1`}
                     id="navbar-sticky"
                 >
                     <ul className="flex flex-col p-4 md:p-0 mt-4 text-white font-medium  rounded-lg bg-[#111] md:flex-row md:space-x-8 md:mt-0 md:border-0">
@@ -102,7 +107,7 @@ const Navbar = ({ isRtl, setIsRtl }) => {
                             <Link
                                 to="/"
                                 className={`block py-2 ${isRtl ? "!pr-3 !pl-4 md:p-0" : " pl-3 pr-4 md:p-0"
-                                    }  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-800  md:dark:hover:text-red-800 dark:text-white   md:dark:hover:bg-transparent`}
+                                    }  rounded md:hover:bg-transparent hover:text-red-800  md:dark:hover:text-red-800 dark:text-white   md:dark:hover:bg-transparent`}
                                 aria-current="page"
                                 onClick={handleClick}
                             >
@@ -113,7 +118,7 @@ const Navbar = ({ isRtl, setIsRtl }) => {
                             <Link
                                 to="/register"
                                 className={`block py-2 ${isRtl ? "!pr-3 pl-4 md:p-0" : " pl-3 pr-4 md:p-0"
-                                    }  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-800  md:dark:hover:text-red-800 dark:text-white   md:dark:hover:bg-transparent`}
+                                    }  rounded  md:hover:bg-transparent hover:text-red-800  md:dark:hover:text-red-800 dark:text-white   md:dark:hover:bg-transparent`}
                                 onClick={handleClick}
                             >
                                 {t("header.register")}
@@ -123,7 +128,7 @@ const Navbar = ({ isRtl, setIsRtl }) => {
                             <Link
                                 to="/medicine"
                                 className={`block py-2 ${isRtl ? "pr-3 pl-4 md:p-0" : " pl-3 pr-4 md:p-0"
-                                    }  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-800  dark:text-white   md:dark:hover:bg-transparent`}
+                                    }  rounded md:hover:bg-transparent hover:text-red-800  dark:text-white   md:dark:hover:bg-transparent`}
                                 onClick={handleClick}
                             >
                                 {t("header.services")}
