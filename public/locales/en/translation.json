@@ -46,7 +46,8 @@
         "hills" : "Hills Science",
         "plan" : "Plan canin",
         "royal" : "Royal canin",
-        "food" : "Food"
+        "food" : "Food",
+        "add_to_cart" : "Add to Cart"
     }
 
 }

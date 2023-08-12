@@ -23,8 +23,8 @@ const Medicine = () => {
   ];
 
   return (
-    <section className="py-10 mt-10">
-      <h2 className="text-center text-3xl changa font-semibold">
+    <section className="py-10 mt-20">
+      <h2 className="text-center text-red-800 text-3xl changa font-semibold">
         {t("pharmacy.medicines")}
       </h2>
       <div className="container my-12 mx-auto px-4 md:px-12">

@@ -24,8 +24,8 @@ const Food = () => {
   ];
 
   return (
-    <section className="py-10 mt-10">
-      <h2 className="text-center text-3xl changa font-semibold">
+    <section className="py-10">
+      <h2 className="text-center text-3xl text-red-800 changa font-semibold">
         {t("pharmacy.food")}
       </h2>
       <div className="container my-12 mx-auto  px-4 md:px-12">

@@ -33,7 +33,11 @@ const MainSection = ({ isRtl }) => {
         </button>
       </div>
       <div className="lg:w-5/12 w-full">
-        <img src="/images/main-section.jpg" alt="vet" className="w-full mt-3" />
+        <img
+          src="/images/main-section.jpg"
+          alt="vet"
+          className="w-full mt-3 rounded-lg"
+        />
       </div>
     </section>
   );

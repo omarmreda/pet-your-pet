@@ -6,66 +6,67 @@ const RegisterPage = () => {
     <div className="flex items-center min-h-screen px-20 bg-[#111]">
       <div className="flex-1 h-full max-w-screen mx-auto bg-[#111]">
         <div className="flex flex-col md:flex-row">
-          <div className="h-32 md:h-auto md:w-1/2">
+          <div className="h-32 md:h-auto md:w-1/2 rounded-3xl py-5 pt-20">
             <img
-              className="object-cover w-full h-full"
-              src="/images/form.jpg"
+              className="object-cover w-full h-full rounded-3xl"
+              src="/images/form.png"
               alt="img"
             />
           </div>
-          <div className="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
-            <div className="w-full flex flex-col">
-              <h1 className="mb-4 text-2xl text-red-800 changa font-bold text-center">
+          <div className="flex  items-center justify-center p-6 sm:p-12 md:w-1/2">
+            <div className="w-full flex flex-col gap-6 h-full pt-16 justify-between py-10">
+              <h1 className="mb-4 text-4xl text-red-800 changa font-bold text-center">
                 {t("form.register")}
               </h1>
               <div>
                 <input
                   type="text"
-                  className="w-full px-4 mt-10 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  className="w-full bg-transparent px-4 py-2 text-white rounded text-sm border border-gray-400 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                   placeholder={t("form.your_name")}
                 />
               </div>
               <div>
                 <input
                   type="text"
-                  className="w-full mt-8 px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  className="w-full bg-transparent px-4 py-2 text-white rounded text-sm border border-gray-400 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                   placeholder={t("form.pets_name")}
                 />
               </div>
               <div>
                 <input
                   type="text"
-                  className="w-full mt-8 px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  className="w-full bg-transparent px-4 py-2 text-white rounded text-sm border border-gray-400 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                   placeholder={t("form.pets_type")}
                 />
               </div>
               <div>
                 <input
                   type="email"
-                  className="w-full px-4 mt-8 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  className="w-full bg-transparent px-4 py-2 text-white rounded text-sm border border-gray-400 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                   placeholder={t("form.email_adress")}
                 />
               </div>
-              <div className="mt-4">
+              <div className="">
                 <input
                   type="text"
-                  className="w-full px-4 mt-8 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  className="w-full bg-transparent px-4 py-2 text-white rounded text-sm border border-gray-400 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                   placeholder={t("form.pets_age")}
                 />
               </div>
               <div>
-                <input
-                  className="w-full px-4 mt-8 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                <textarea
+                  className="w-full bg-transparent px-4 py-2 text-white rounded text-sm border border-gray-400 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                   placeholder={t("form.any_notes")}
-                  type="text"
-                />
+                  cols={9}
+                  rows={9}
+                ></textarea>
+                <button
+                  className="block w-full mt-16 px-4 py-2  text-sm font-medium leading-5 text-center text-gray-800 transition-colors duration-150 bg-gray-50 border border-transparent rounded-lg active:bg-blue-600 hover:bg-gray-700 hover:text-white focus:outline-none focus:shadow-outline-blue"
+                  href="#"
+                >
+                  {t("form.register")}
+                </button>
               </div>
-              <button
-                className="block w-full mt-16 px-4 py-2  text-sm font-medium leading-5 text-center text-gray-800 transition-colors duration-150 bg-gray-50 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
-                href="#"
-              >
-                {t("form.register")}
-              </button>
             </div>
           </div>
         </div>
