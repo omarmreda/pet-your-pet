@@ -1,10 +1,28 @@
 // import CardItem from "../ServiceCard/CardItem";
 import { useTranslation } from "react-i18next";
-import food from "../../data/food";
 import ProductCard from "../ProductCard/ProductCard";
 
 const Food = () => {
   const { t } = useTranslation();
+
+  const food = [
+    {
+      productName: t("pharmacy.hills"),
+      productPrice: 25,
+      productImg: "/images/hills.jpg",
+    },
+    {
+      productName: t("pharmacy.plan"),
+      productPrice: 19,
+      productImg: "/images/science.jpg",
+    },
+    {
+      productName: t("pharmacy.royal"),
+      productPrice: 45,
+      productImg: "/images/royal.png",
+    },
+  ];
+
   return (
     <section className="py-10 mt-10">
       <h2 className="text-center text-3xl changa font-semibold">

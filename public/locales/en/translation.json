@@ -40,6 +40,12 @@
     },
     "pharmacy":{
         "medicines" : "Medicines",
+        "canaural" : "Canaural",
+        "easotic" : "Easotic",
+        "isathal" : "Isathal",
+        "hills" : "Hills Science",
+        "plan" : "Plan canin",
+        "royal" : "Royal canin",
         "food" : "Food"
     }
 

@@ -41,6 +41,12 @@
     },
     "pharmacy":{
         "medicines" : "الدواء",
+        "canaural" : "كانورال",
+        "easotic" : "ايسوتك",
+        "isathal" : "ايسال",
+        "hills" : "هيلز",
+        "plan" : "بلان كانين",
+        "royal" : "رويال كانين",
         "food" : "الغذاء"
     }
 }

@@ -1,9 +1,26 @@
 import { useTranslation } from "react-i18next";
-import medicines from "../../data/medicines";
 import ProductCard from "../ProductCard/ProductCard";
 
 const Medicine = () => {
   const { t } = useTranslation();
+
+  const medicines = [
+    {
+      productName: t("pharmacy.canaural"),
+      productPrice: 11,
+      productImg: "/images/canaural.png",
+    },
+    {
+      productName: t("pharmacy.easotic"),
+      productPrice: 19,
+      productImg: "/images/easotic.png",
+    },
+    {
+      productName: t("pharmacy.isathal"),
+      productPrice: 22,
+      productImg: "/images/isathal.png",
+    },
+  ];
 
   return (
     <section className="py-10 mt-10">
