@@ -23,11 +23,11 @@ const MainSection = ({ isRtl }) => {
             {t("mainSection.heading_three")}
           </span>
         </h1>
-        <p className="mt-6">{t("mainSection.paragraph")}</p>
+        <p className="mt-6 text-white">{t("mainSection.paragraph")}</p>
         <button
           type="button"
           onClick={NavigateToRegister}
-          className="text-red-800 mt-6 bg-white border border-red-800 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2"
+          className="text-red-800 mt-16 bg-white border border-red-800 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2"
         >
           {t("mainSection.button")}
         </button>

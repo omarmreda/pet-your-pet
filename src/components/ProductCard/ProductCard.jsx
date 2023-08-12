@@ -8,11 +8,11 @@ const ProductCard = ({ imgUrl, productName, productPrice }) => {
 
         <header className="flex items-center justify-between leading-tight p-2 md:p-4">
           <h1 className="text-lg">
-            <a className="no-underline hover:underline text-gray-800" href="#">
+            <a className="no-underline hover:underline text-white" href="#">
               {productName}
             </a>
           </h1>
-          <p class="text-gray-800 text-sm">e£ {productPrice}</p>
+          <p class="text-white text-sm">e£ {productPrice}</p>
         </header>
         <button className="text-center py-4 mt-4 mx-auto">Add to cart</button>
       </article>

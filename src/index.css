@@ -9,6 +9,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #111;
+}
 
 .changa {
     font-family: 'Changa', sans-serif;
