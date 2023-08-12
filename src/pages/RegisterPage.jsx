@@ -1,7 +1,30 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation, useRef } from "react-i18next";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 const RegisterPage = () => {
   const { t } = useTranslation();
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="flex items-center min-h-screen px-20 bg-[#111]">
       <div className="flex-1 h-full max-w-screen mx-auto bg-[#111]">
@@ -14,13 +37,17 @@ const RegisterPage = () => {
             />
           </div>
           <div className="flex  items-center justify-center p-6 sm:p-12 md:w-1/2">
-            <div className="w-full flex flex-col gap-6 h-full pt-16 justify-between py-10">
+            <form
+              className="w-full flex flex-col gap-6 h-full pt-16 justify-between py-10"
+              onSubmit={sendEmail}
+            >
               <h1 className="mb-4 text-4xl text-red-800 changa font-bold text-center">
                 {t("form.register")}
               </h1>
               <div>
                 <input
                   type="text"
+                  name="user_name"
                   className="w-full bg-transparent px-4 py-2 text-white rounded text-sm border border-gray-400 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                   placeholder={t("form.your_name")}
                 />
@@ -42,11 +69,12 @@ const RegisterPage = () => {
               <div>
                 <input
                   type="email"
+                  name="user_email"
                   className="w-full bg-transparent px-4 py-2 text-white rounded text-sm border border-gray-400 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                   placeholder={t("form.email_adress")}
                 />
               </div>
-              <div className="">
+              <div>
                 <input
                   type="text"
                   className="w-full bg-transparent px-4 py-2 text-white rounded text-sm border border-gray-400 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
@@ -62,12 +90,12 @@ const RegisterPage = () => {
                 ></textarea>
                 <button
                   className="block w-full mt-16 px-4 py-2  text-sm font-medium leading-5 text-center text-gray-800 transition-colors duration-150 bg-gray-50 border border-transparent rounded-lg active:bg-blue-600 hover:bg-gray-700 hover:text-white focus:outline-none focus:shadow-outline-blue"
-                  href="#"
+                  type="submit"
                 >
                   {t("form.register")}
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
