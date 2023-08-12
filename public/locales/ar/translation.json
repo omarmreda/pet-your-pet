@@ -37,7 +37,8 @@
         "pets_type" : "نوع حيوانك الأليف",
         "email_adress" : "البريد الإلكترونى",
         "pets_age" : "عمر حيوانك الأليف",
-        "any_notes" : "ملاحظات"
+        "any_notes" : "ملاحظات",
+        "submitted" : "تم التسجيل بنجاح"
     },
     "pharmacy":{
         "medicines" : "الدواء",

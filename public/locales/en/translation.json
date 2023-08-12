@@ -36,7 +36,8 @@
         "pets_type" : "Pet type",
         "email_adress" : "Email",
         "pets_age" : "Pet Age",
-        "any_notes" : "Any notes about the pet"
+        "any_notes" : "Any notes about the pet",
+        "submitted" : "Submitted Successfully!"
     },
     "pharmacy":{
         "medicines" : "Medicines",
