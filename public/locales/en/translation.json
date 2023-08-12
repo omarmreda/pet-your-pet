@@ -1,7 +1,7 @@
 {
     "header": {
         "home": "Home",
-        "about": "About",
+        "register": "Register your pet",
         "services": "Pharmacy",
         "contact": "Contact"
     },
@@ -26,8 +26,17 @@
         "legal" : "legal",
         "privacy" : "Privacy Policy",
         "terms" : "Terms & conditions",
-        "about": "About",
-        "services": "Services"
+        "home": "Home",
+        "pharmacy": "Pharmacy"
+    },
+    "form" : {
+        "register" : "Register",
+        "your_name" : "Your Name",
+        "pets_name" : "Your Pet Name",
+        "pets_type" : "Pet type",
+        "email_adress" : "Email",
+        "pets_age" : "Pet Age",
+        "any_notes" : "Any notes about the pet"
     },
     "pharmacy":{
         "medicines" : "Medicines",

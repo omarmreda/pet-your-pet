@@ -18,10 +18,10 @@ const Footer = ({ isRtl }) => {
                             <h2 className="mb-6 text-sm font-semibold text-red-800 uppercase">{t('footer.links')}</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">{t('footer.about')}</a>
+                                    <a href="#" className="hover:underline">{t('footer.home')}</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:underline">{t('footer.services')}</a>
+                                    <a href="#" className="hover:underline">{t('footer.pharmacy')}</a>
                                 </li>
                             </ul>
                         </div>

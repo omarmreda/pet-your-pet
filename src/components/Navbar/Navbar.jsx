@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 const Navbar = ({ isRtl, setIsRtl }) => {
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+    }
     const { t } = useTranslation()
     return (
         <nav
@@ -13,7 +16,7 @@ const Navbar = ({ isRtl, setIsRtl }) => {
             style={{ direction: isRtl ? 'rtl' : 'ltr' }}
         >
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="#" className="flex items-center">
+                <Link to='/' className="flex items-center" onClick={handleClick}>
                     <img
                         src="/images/logo.png"
                         className={`h-8  ${isRtl ? 'ml-3' : 'mr-3'}`}
@@ -22,7 +25,7 @@ const Navbar = ({ isRtl, setIsRtl }) => {
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                         Pet your Pet
                     </span>
-                </a>
+                </Link>
                 <div className="flex md:order-2">
                     <div className="group inline-block relative">
                         <button
@@ -37,9 +40,10 @@ const Navbar = ({ isRtl, setIsRtl }) => {
                             <li
                                 className="rounded-t flex cursor-pointer items-center justify-start gap-2  hover:bg-gray-400 py-2 px-4  whitespace-no-wrap"
                                 onClick={() => {
-                                    i18next.changeLanguage('en');
-                                    Cookies.set('i18next', 'en');
+                                    i18next.changeLanguage('en')
+                                    Cookies.set('i18next', 'en')
                                     setIsRtl(false)
+                                    window.scrollTo(0, 0)
                                 }}
                             >
                                 <span>English</span>
@@ -52,9 +56,10 @@ const Navbar = ({ isRtl, setIsRtl }) => {
                             <li
                                 className="rounded-t flex cursor-pointer justify-start items-center gap-2  hover:bg-gray-400 py-2 px-4  whitespace-no-wrap"
                                 onClick={() => {
-                                    i18next.changeLanguage('ar');
-                                    Cookies.set('i18next', 'ar');
+                                    i18next.changeLanguage('ar')
+                                    Cookies.set('i18next', 'ar')
                                     setIsRtl(true)
+                                    window.scrollTo(0, 0)
                                 }}
                             >
                                 <span className="pl-2">العربية</span>
@@ -105,20 +110,22 @@ const Navbar = ({ isRtl, setIsRtl }) => {
                                     : ' pl-3 pr-4 md:p-0'
                                     } text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-800  md:dark:hover:text-red-800 dark:text-white   md:dark:hover:bg-transparent`}
                                 aria-current="page"
+                                onClick={handleClick}
                             >
                                 {t('header.home')}
                             </Link>
                         </li>
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                to='/register'
                                 className={`block py-2 ${isRtl
                                     ? '!pr-3 pl-4 md:p-0'
                                     : ' pl-3 pr-4 md:p-0'
                                     } text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-800  md:dark:hover:text-red-800 dark:text-white   md:dark:hover:bg-transparent`}
+                                onClick={handleClick}
                             >
-                                {t('header.about')}
-                            </a>
+                                {t('header.register')}
+                            </Link>
                         </li>
                         <li>
                             <Link
@@ -127,6 +134,7 @@ const Navbar = ({ isRtl, setIsRtl }) => {
                                     ? 'pr-3 pl-4 md:p-0'
                                     : ' pl-3 pr-4 md:p-0'
                                     } text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-800  dark:text-white   md:dark:hover:bg-transparent`}
+                                onClick={handleClick}
                             >
                                 {t('header.services')}
                             </Link>

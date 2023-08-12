@@ -1,8 +1,8 @@
 {
     "header": {
         "home": "الرئيسية",
-        "about": "تعرف علينا",
-        "services": "العيادة",
+        "register": "سجل الاَن",
+        "services": "الدواء",
         "contact": "تواصل معنا"
     },
     "mainSection": {
@@ -26,9 +26,18 @@
             "privacy" : "حقوق الملكية",
             "legal" : "الحقوق",
             "terms" : "الشروط و القواعد",
-            "about" : "تعرف علينا",
-            "services" : "الخدمات"
+            "home" : "الرئيسية",
+            "pharmacy" : "الدواء"
 
+    },
+    "form" : {
+        "register" : "سجل الاَن",
+        "your_name" : "إسمك",
+        "pets_name" : "إسم حيوانك الأليف",
+        "pets_type" : "نوع حيوانك الأليف",
+        "email_adress" : "البريد الإلكترونى",
+        "pets_age" : "عمر حيوانك الأليف",
+        "any_notes" : "ملاحظات"
     },
     "pharmacy":{
         "medicines" : "الدواء",
