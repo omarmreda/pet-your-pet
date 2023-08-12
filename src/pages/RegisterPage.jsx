@@ -10,8 +10,10 @@ const RegisterPage = () => {
     const [loading, setLoading] = useState(false);
 
     const { t } = useTranslation();
+    const form = useRef();
 
     useEffect(() => emailjs.init("8EanjsSIu6a5OZD5T"), []);
+    // Add these
     const handleSubmit = async (e) => {
         e.preventDefault();
         const serviceId = "service_gw1um9r";
@@ -24,9 +26,20 @@ const RegisterPage = () => {
             });
         } catch (error) {
             console.log(error);
+            toast('Error try again', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: false,
+                type: "error",
+                progress: undefined,
+                theme: "light",
+            });
         } finally {
             setLoading(false);
-            toast(t('form.submitted'), {
+            toast('Succefully submitted', {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -96,7 +109,7 @@ const RegisterPage = () => {
                             <div>
                                 <input
                                     required
-                                    type="number"
+                                    type="text"
                                     className="w-full bg-transparent px-4 py-2 text-white rounded text-sm border border-gray-400 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                                     placeholder={t("form.pets_age")}
                                 />
@@ -116,9 +129,9 @@ const RegisterPage = () => {
                                 >
                                     {t("form.register")}
                                 </button>
-                                <ToastContainer />
                             </div>
                         </form>
+                        <ToastContainer />
                     </div>
                 </div>
             </div>

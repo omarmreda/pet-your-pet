@@ -49,6 +49,16 @@
         "royal" : "Royal canin",
         "food" : "Food",
         "add_to_cart" : "Add to Cart"
+    },
+    "cart":{
+        "empty" : "Your Cart is Currently empty",
+        "cart" : "Shopping Cart",
+        "price" : "Price",
+        "quantity" : "Quantity",
+        "continue" : "Continue Shopping",
+        "checkout" : "Checkout",
+        "remove" : "Remove",
+        "added" : "Item added to cart"
     }
 
 }
