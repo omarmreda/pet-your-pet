@@ -1,4 +1,4 @@
-import { GrLanguage } from "react-icons/gr";
+import { MdOutlineLanguage } from "react-icons/md";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
@@ -34,7 +34,7 @@ const Navbar = ({ isRtl, setIsRtl }) => {
                 isRtl ? "ml-3 md:ml-0" : "mr-3 md:mr-0"
               }`}
             >
-              <GrLanguage className="text-base text-gray-50 group-hover:text-red-800" />
+              <MdOutlineLanguage className="text-white text-xl group-hover:text-red-800" />
               <MdOutlineKeyboardArrowDown className="text-white text-lg group-hover:text-red-800" />
             </button>
             <ul className="absolute bg-[#111] hidden text-white w-max pt-4 group-hover:flex flex-col left-1/2 transform -translate-x-1/2 text-center z-50">
