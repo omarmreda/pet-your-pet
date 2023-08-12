@@ -32,7 +32,8 @@ const Medicine = () => {
           {medicines.map((medicine) => (
             <ProductCard
               imgUrl={medicine.productImg}
-              serviceName={medicine.productName}
+              productName={medicine.productName}
+              productPrice={medicine.productPrice}
               key={medicine.productName}
             />
           ))}

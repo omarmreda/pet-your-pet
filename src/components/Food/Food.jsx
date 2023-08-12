@@ -33,8 +33,9 @@ const Food = () => {
           {food.map((foodItem) => (
             <ProductCard
               imgUrl={foodItem.productImg}
-              serviceName={foodItem.productName}
+              productName={foodItem.productName}
               key={foodItem.productName}
+              productPrice={foodItem.productPrice}
             />
           ))}
         </div>
