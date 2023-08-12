@@ -1,8 +1,14 @@
 import { useTranslation } from "react-i18next";
 import ServiceCard from "../ServiceCard/ServiceCard";
+import { useNavigate } from "react-router-dom";
 
 const Services = ({ isRtl }) => {
+  const navigate = useNavigate();
   const { t } = useTranslation();
+
+  const navigateToMedicine = () => {
+    navigate("/medicine");
+  };
   return (
     <section className="py-10" style={{ direction: isRtl ? "rtl" : "ltr" }}>
       <h2 className="text-center changa text-3xl font-semibold text-red-800">
@@ -20,6 +26,7 @@ const Services = ({ isRtl }) => {
           />
           <ServiceCard
             imgUrl="/images/pets-medicine.jpg"
+            onClick={navigateToMedicine}
             serviceName={t("services.service_three")}
           />
         </div>

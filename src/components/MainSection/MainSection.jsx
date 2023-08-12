@@ -10,10 +10,10 @@ const MainSection = ({ isRtl }) => {
   };
   return (
     <section
-      className="w-full mt-20 flex justify-around py-14"
+      className="w-full mt-20 flex lg:px-0 px-4 lg:flex-row flex-col justify-around py-14"
       style={{ direction: isRtl ? "rtl" : "ltr" }}
     >
-      <div className="w-5/12 ">
+      <div className="lg:w-5/12 w-full ">
         <h1 className="w-full changa text-red-800">
           <span className="block text-2xl">{t("mainSection.heading_one")}</span>
           <span className="block text-4xl font-bold mt-3">
@@ -32,7 +32,7 @@ const MainSection = ({ isRtl }) => {
           {t("mainSection.button")}
         </button>
       </div>
-      <div className="w-5/12">
+      <div className="lg:w-5/12 w-full">
         <img src="/images/main-section.jpg" alt="vet" className="w-full mt-3" />
       </div>
     </section>
